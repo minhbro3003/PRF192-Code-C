@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int check1(int n){  //kiểm tra và trả về n có phải là số dương - chẵn 
+	if (n > 0 && n%2 == 0){
+		return 0;
+	}
+	else{
+		return 1;
+	}
+//    return ( n > 0 && n % 2 == 0)? 1 : 0;
+}
+int check2(int n){ //kiểm tra và trả về n có phải là số dương - lẻ 
+	if (n > 0 && n%2 == !0){
+		return 0;
+	}else{
+		return 1;
+	}
+}
+int check3(int n){ //kiểm tra và trả về n có phải là số âm - chẵn 
+	if (n < 0 && n%2 == 0){
+		return 0;
+	}else{
+		return 1;
+	}
+}
+int check4(int n){ //kiểm tra và trả về n có phải là số âm - lẻ 
+	if (n < 0 && n%2 == !0){
+		return 0;
+	}else{
+		return 1;
+	}
+}
+	
+int main(){
+	int n;
+	printf("Please enter number: ");
+	scanf("%d", &n);
+	if (check2(n)==0){
+		printf ("0");
+	}else {
+		printf ("1");
+	}
+}
