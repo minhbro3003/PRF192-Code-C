@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//If - else in trus and false 
+//int checkxx(int n);
+//trong đó xx là 00->99
+//định nghĩa 1 số nguyên là như thế nào? viết và trả về hàm, kiểm tra xem số n nhập vào 
+//có đúng định nghĩa ở trên hay ko? Phải -1 / không phải -0
+//mỗi bạn định nghĩa ít nhất 25 số (số nguyên tố, chính phương, lập phương, dư,..
+//Thêm - sửa - xóa - tìm kiếm
+ 
+int check1(int n){  //kiểm tra và trả về n có phải là số dương - chẵn 
+	if ( n > 0 && n % 2 == 0){
+		return 1;
+	}
+	else {
+		return 0;
+	} 
+}
+
+int check2(int n){ //kiểm tra và trả về n có phải là số dương - lẻ 
+	if(n > 0 && n % 2 != 0){
+		return 1;
+	}
+	else{
+		return 0;
+	} 
+}
+
+int check3(int n){  //kiểm tra và trả về n có phải là số âm - chẵn 
+	if(n < 0 && n % 2 == 0){
+		return 1; 
+	}
+	else{
+		return 0; 
+	}
+}
+
+int check4(int n){  //kiểm tra và trả về n có phải là số âm - lẻ
+	if(n < 0 && n % 2 != 0){
+		return 1; 
+	}
+	else {
+		return 0;
+	}
+}
+int main(){
+	int n; 
+	printf("Input number n>0: ");
+	scanf("%d", &n);
+		if (check4(n) == 0)
+			printf("0");
+		else 
+			printf("1");
+}
+
