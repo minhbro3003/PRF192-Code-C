@@ -1,62 +1,92 @@
-[Project]
-filename=Array.dev
-name=Array
-Type=1
-Ver=2
-ObjFiles=
-Includes=
-Libs=
-PrivateResource=
-ResourceIncludes=
-MakeIncludes=
-Compiler=
-CppCompiler=
-Linker=
-IsCpp=0
-Icon=
-ExeOutput=
-ObjectOutput=
-LogOutput=
-LogOutputEnabled=0
-OverrideOutput=0
-OverrideOutputName=
-HostApplication=
-UseCustomMakefile=0
-CustomMakefile=
-CommandLine=
-Folders=
-IncludeVersionInfo=0
-SupportXPThemes=0
-CompilerSet=0
-CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8;0;0;0
-UnitCount=1
+#include <stdio.h>
 
-[VersionInfo]
-Major=1
-Minor=0
-Release=0
-Build=0
-LanguageID=1033
-CharsetID=1252
-CompanyName=
-FileVersion=
-FileDescription=Developed using the Dev-C++ IDE
-InternalName=
-LegalCopyright=
-LegalTrademarks=
-OriginalFilename=
-ProductName=
-ProductVersion=
-AutoIncBuildNr=0
-SyncProduct=1
+//tương tự như câu 3 nhưng sau phần tử cuối cùng không có ":"
 
-[Unit1]
-FileName=main.c
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
+int main() {
+    int n, i;
+    printf("Enter 5 values: ");
+    scanf("%d", &n);
+    
+    int a[n];
+    for (int i = 0; i < n; i++){
+        printf("a[%d]= ", i);
+        scanf("%d", &a[i]);
+    }
+    printf("In cac so chan:\n ");
+    for(i = 0; i < n - 2; i++) {
+        if(a[i] % 2 == 0)
+           printf("%d: ", a[i]);
+    }
+    printf("%d", a[i]);
+    
+    printf("\nOutput\n");
+    for (int i = 0; i < n; i++){
+        printf("%d: ", a[i]); 
+    }
+  return 0;
+}
 
+/*
+//in ra tất cả các phần tử chẵn của mảng và các phần tử được cách nhau bởi dấu ":"
+	int main() {
+    int n, i;
+    printf("Enter 5 values: ");
+    scanf("%d", &n);
+    
+    int a[n];
+    for (int i = 0; i < n; i++){
+        printf("a[%d]= ", i);
+        scanf("%d", &a[i]);
+    }
+    printf("In cac so chan:\n ");
+    for(i = 0; i < n; i++) {
+        if(a[i] % 2 == 0)
+           printf("%d: ", a[i]);
+    }
+    
+    printf("\nOutput\n");
+    for (int i = 0; i < n; i++){
+        printf("%d: ", a[i]); 
+    }
+  return 0;
+} 
+*/	
+	
+//tương tự như câu 1 nhưng sau phần tử cuối cùng không có ":"
+	/*
+	int n, i;
+	int a[n];
+	printf("Input size of array: ");
+	scanf("%d", &n);
+	for(i = 0; i < n; i++){
+		printf("a[%d] =", i);
+		scanf("%d", &a[i]);
+	}
+	printf("\nOUTPUT\n");
+	for(i = 0; i < n - 1; i++){
+		printf("%d: ", a[i]);
+	}
+	printf("%d", a[i]); 
+	printf("\n");
+	system("pause"); 
+	}
+*/
+
+//in mảng số ra ngoài màn hình, các phần tử được cách nhau bởi dấu ":"
+/*
+int main() {
+	int n, i;
+	int a[1000];
+	printf("Input size of array");
+	scanf("%d", &n);
+	for(i = 0; i < n; i++){
+		printf("a[%d] =", i);
+		scanf("%d", &a[i]); 
+	}
+	printf("\nOutput\n");
+	for(i = 0; i < n; i++){
+		printf("%d: ", a[i]); 
+	}
+	return 0;
+}
+*/
