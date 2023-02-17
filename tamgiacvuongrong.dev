@@ -1,72 +1,73 @@
-[Project]
-filename=1234tamgiac.dev
-name=1234tamgiac
-Type=1
-Ver=2
-ObjFiles=
-Includes=
-Libs=
-PrivateResource=
-ResourceIncludes=
-MakeIncludes=
-Compiler=
-CppCompiler=
-Linker=
-IsCpp=0
-Icon=
-ExeOutput=
-ObjectOutput=
-LogOutput=
-LogOutputEnabled=0
-OverrideOutput=0
-OverrideOutputName=
-HostApplication=
-UseCustomMakefile=0
-CustomMakefile=
-CommandLine=
-Folders=
-IncludeVersionInfo=0
-SupportXPThemes=0
-CompilerSet=0
-CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;8;0;0;0
-UnitCount=2
+#include <stdio.h>
+#include <stdlib.h>
 
-[VersionInfo]
-Major=1
-Minor=0
-Release=0
-Build=0
-LanguageID=1033
-CharsetID=1252
-CompanyName=
-FileVersion=
-FileDescription=Developed using the Dev-C++ IDE
-InternalName=
-LegalCopyright=
-LegalTrademarks=
-OriginalFilename=
-ProductName=
-ProductVersion=
-AutoIncBuildNr=0
-SyncProduct=1
+//in ra 4 goc tam giác vuông rỗng 
 
-[Unit1]
-FileName=main.c
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit2]
-FileName=..\..\..\ex24\Untitled2.c
-CompileCpp=0
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
+int main(int argc, char *argv[]) {
+	int t; 
+	printf("Input integer: ");
+	scanf("%d", &t);
+	
+	switch(t)
+	{
+		case 1:
+			{
+				int n, i, j; 
+    			printf("Enter n: ");
+    			scanf("%d", &n); 
+	
+				for(i = 0; i < n; i++){
+					for(j = 0; j < n; j++){
+						if(j == 0 || i == j || i == n - 1) 
+							printf("* ");
+						else
+							printf("  ");
+					}
+					printf("\n");
+				}
+//			break;
+			}
+		case 2:
+			{
+//				int main(void) {
+  				int n;
+  				printf("Nhap n: ");
+  				scanf("%d", &n);
+    			int tmp = n - 1;
+  				for(int i = 0; i < n; i++){
+    				for(int j = 0; j < n; j++){
+     					if(j == n - 1 || i == n - 1 || j == tmp)
+      					  printf("* ");
+     					 else
+      					  printf("  ");
+    				}
+    				printf("\n");
+   					tmp--;
+  				}
+//				}
+//			break;	
+			}
+		case 3: 
+			{
+				int n, i, j; 
+    			printf("Enter n: ");
+    			scanf("%d", &n);
+	
+				for(i = 0; i < n; i++){
+					for(j = 0; j < n; j++){
+						if(i == 0 || i == j || j == n - 1) 
+							printf("* ");
+						else
+							printf("  ");
+					}
+					printf("\n");
+				}
+//			break;
+			}
+		case 4: 
+			{
+				
+			}
+	}
+	
+}
