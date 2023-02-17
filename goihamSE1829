@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void Hello (int c){
+//	printf("Hello welcome to PRF192 class - SE%d \n", c);
+	printf("Xin chao cac ban den voi mon PRF192 lop - SE%d\n", c);
+
+}
+int H(int x){
+	return 5; 
+}
+main(){
+//	printf("Hello welcome to PRF192 class - SE1829 \n");
+//	printf("Hello welcome to PRF192 class - SE1824 \n");
+//	printf("Hello welcome to PRF192 class - SE1804 \n");
+	int s = 1 + H(1829); 
+	Hello(1829);
+	Hello(1804);
+	Hello(1824);
+	Hello(1830);
+}
+
+/*
+int main(int argc, char *argv[]) {
+	int n, index, value, i;
+	int a[1000];
+	printf("Input size of array: ");
+	scanf("%d", &n);
+	
+	for(i = 0; i < n; i++){
+		printf("a[%d] = ", i);
+		scanf("%d", &a[i]);
+		
+	}
+	printf("\n");
+	for (i = 0; i < n; i++){
+		printf("%d ", a[i]);
+	}
+	printf("\n");
+	printf("Input value = ");
+	scanf("%d", &value);
+	printf("Input index = ");
+	scanf("%d", &index); 
+	return 0;
+}
+*/
