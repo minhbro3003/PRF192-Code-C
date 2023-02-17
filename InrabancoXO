@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//in ra bàn cờ X O 
+
+int main(int argc, char *argv[]) {
+	int n, i, j; 
+	printf("Enter integer: ");
+	scanf("%d", &n);
+				
+//	for(i = 0; i < 2 * n + 1; i++){
+//		for(j = 0; j < 2 * n + 1; j++){
+//			if(i%2==0&&j%2==0) printf("+");
+//			if(i%2==0&&j%2!=0) printf(" _ ");
+//			if(i%2!=0&&j%2==0) printf("|");
+//			if(i%2!=0&&j%2!=0) printf(" %s ", ((i / 2 + j / 2) % 2 == 0? "X" : "O"));
+//		}
+//		printf("\n");
+//	}
+
+//cách khác 
+	for (i = 0; i < n; i++){
+		for (j = 0; j < n; j++) 
+			printf("+ - "); 
+			printf("+\n");
+		for (j = 0; j < n; j++)
+			printf("| %c ", (i + j) % 2 == 0? 88 : 79);
+			printf("|\n");
+	}
+	for (j = 0; j < n; j++)
+		printf("+ - ");
+		printf("+\n"); 
+	return 0;
+}
