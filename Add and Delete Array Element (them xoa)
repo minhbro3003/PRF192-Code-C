@@ -1,0 +1,64 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+//thêm - xóa phần tử trong mảng 
+int main() {
+   int n, i, j, pos, x, y;
+   printf("Input n: ");
+   scanf("%d", &n);
+   int arr[n];
+   
+   // Nhập mảng
+   for (i = 0; i < n; i++) {
+   	printf("a[%d]: ", i);
+      scanf("%d", &arr[i]);
+   }
+   
+   // Nhập vị trí cần thêm phần tử
+   printf("Nhap vi tri can them phan tu: ");
+   scanf("%d", &pos);
+   
+   // Nhập phần tử cần thêm
+   printf("Nhap phan tu can them: ");
+   scanf("%d", &x);
+   
+   // Di chuyển các phần tử sau vị trí thêm phần tử sang phải một vị trí
+   for (i = n; i >= pos; i--) {
+      arr[i] = arr[i-1];
+   }
+   
+   // Thêm phần tử vào vị trí đã chọn
+   arr[pos] = x;
+   n++;
+ 
+   // Hiển thị mảng trước khi xóa phần tử
+   printf("The array before sorting: ");
+   for (i = 0; i < n; i++) {
+      printf("%d ", arr[i]);
+   }
+   printf("\n");
+   
+   // Nhập phần tử cần xóa
+   printf("Nhap phan tu can xoa: ");
+   scanf("%d", &y);
+   
+   // Tìm và xóa phần tử
+   for (i = 0; i < n; i++) {
+      if (arr[i] == y) {
+         for (j = i; j < n-1; j++) {
+            arr[j] = arr[j+1];
+         }
+         n--;
+         break;
+      }
+   }
+   
+   // Hiển thị mảng sau khi xóa phần tử
+   printf("The array after sorting: ");
+   for (i = 0; i < n; i++) {
+      printf("%d ", arr[i]);
+   }
+   printf("\n");
+   
+   return 0;
+}
